@@ -1,319 +1,1076 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ABC Prime Services | Lead Conversion Systems for Contractors & Home Services</title>
-  <meta name="description" content="ABC Prime Services helps contractors and home service businesses stop losing leads from missed calls, slow response times, and weak follow-up with AI-powered lead conversion systems." />
+  <title>ABC Prime Lead Desk | AI Lead Conversion for Contractors & Home Services</title>
+  <meta name="description" content="Florida contractors lose thousands every week to missed calls and slow follow-up. ABC Prime Lead Desk installs a done-for-you AI lead conversion system that responds instantly, follows up automatically, and books more estimates." />
   <link rel="preconnect" href="https://api.fontshare.com">
-  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=general-sans@500,600,700&display=swap">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&f[]=satoshi@400,500,700&display=swap">
   <style>
     :root {
-      --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.875rem);
-      --text-sm: clamp(0.9rem, 0.86rem + 0.2vw, 1rem);
-      --text-base: clamp(1rem, 0.97rem + 0.18vw, 1.0625rem);
-      --text-lg: clamp(1.125rem, 1.02rem + 0.45vw, 1.375rem);
-      --text-xl: clamp(1.5rem, 1.2rem + 1vw, 2rem);
-      --text-2xl: clamp(2.1rem, 1.55rem + 2vw, 3.4rem);
-      --color-bg:#0d1728; --color-text:#f5f1e6; --color-text-muted:#c8bfaf; --color-text-faint:#8e96ab; --color-primary:#d4a63a; --color-primary-hover:#e0b551; --color-primary-highlight:#26334e; --color-text-inverse:#101a2b;
-      --radius-md:0.75rem; --radius-lg:1rem; --radius-xl:1.5rem; --radius-full:9999px;
-      --shadow-sm:0 1px 2px rgba(0,0,0,.22); --shadow-md:0 8px 24px rgba(0,0,0,.28); --shadow-lg:0 24px 60px rgba(0,0,0,.36);
-      --content: 1120px;
-      --font-heading:'General Sans', Arial, sans-serif;
-      --font-body:'Satoshi', Inter, sans-serif;
+      --text-xs:   clamp(0.72rem,  0.69rem + 0.15vw, 0.825rem);
+      --text-sm:   clamp(0.875rem, 0.84rem + 0.2vw,  1rem);
+      --text-base: clamp(1rem,     0.97rem + 0.18vw,  1.0625rem);
+      --text-lg:   clamp(1.125rem, 1.02rem + 0.45vw,  1.35rem);
+      --text-xl:   clamp(1.5rem,   1.2rem  + 1vw,     2.1rem);
+      --text-2xl:  clamp(2.2rem,   1.6rem  + 2.2vw,   3.6rem);
+
+      --navy:        #07111f;
+      --navy-mid:    #0b1929;
+      --navy-card:   rgba(255,255,255,.038);
+      --navy-card-h: rgba(201,152,42,.045);
+      --border:      rgba(255,255,255,.08);
+      --border-s:    rgba(255,255,255,.13);
+
+      --gold:        #c9982a;
+      --gold-lt:     #e0af3e;
+      --gold-pale:   #f4d98a;
+      --gold-glow:   rgba(201,152,42,.22);
+      --gold-bg:     rgba(201,152,42,.11);
+      --gold-border: rgba(201,152,42,.28);
+
+      --ink:         #eee8d5;
+      --ink-2:       #b5ac9a;
+      --ink-3:       #687080;
+      --ink-inv:     #07111f;
+
+      --r-pill: 9999px;
+      --r-lg:   1.25rem;
+      --r-xl:   1.5rem;
+
+      --sh-gold: 0 4px 28px rgba(201,152,42,.26);
+      --sh-lg:   0 24px 64px rgba(0,0,0,.55);
+
+      --max-w: 1140px;
+      --f-head: 'Cabinet Grotesk', Arial, sans-serif;
+      --f-body: 'Satoshi', Inter, sans-serif;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;background:linear-gradient(180deg,#0d1728 0%,#0f1b2f 100%);color:var(--color-text);-webkit-font-smoothing:antialiased}
-    img{display:block;max-width:100%;height:auto}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(calc(100% - 2rem),var(--content));margin-inline:auto}
-    .skip-link{position:absolute;left:-9999px}.skip-link:focus{left:1rem;top:1rem;padding:.75rem 1rem;background:var(--color-primary);color:var(--color-text-inverse);border-radius:var(--radius-md);z-index:100}
-    .site-header{position:sticky;top:0;z-index:10;background:rgba(13,23,40,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
-    .nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0}
-    .brand{display:flex;align-items:center;gap:.85rem}
-    .logo{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#d4a63a,#f0d085);box-shadow:var(--shadow-md)}
-    .brand strong,.section-kicker,.stat strong,.contact-value,.card h3,.step h3{font-family:var(--font-heading)}
-    .brand strong{display:block;font-size:1rem;letter-spacing:.01em}
-    .brand span{display:block;font-size:var(--text-xs);color:var(--color-text-muted)}
-    .actions{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
-    .phone-link{font-size:var(--text-sm);color:var(--color-text-muted)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.95rem 1.3rem;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:700;transition:.18s ease}
-    .btn-primary{background:var(--color-primary);color:var(--color-text-inverse);box-shadow:var(--shadow-md)}
-    .btn-primary:hover{background:var(--color-primary-hover);transform:translateY(-1px)}
-    .btn-secondary{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04)}
-    .btn-secondary:hover{background:rgba(255,255,255,.08)}
-    .hero{padding:4.25rem 0 3.5rem}
-    .hero-grid{display:grid;gap:2rem;align-items:stretch}
-    .section-kicker{display:inline-flex;align-items:center;padding:.45rem .8rem;border-radius:var(--radius-full);background:var(--color-primary-highlight);color:var(--color-primary);font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    h1,h2,h3{margin:0;line-height:1.08}
-    h1{font-family:var(--font-heading);font-size:var(--text-2xl);max-width:10ch;letter-spacing:-.03em}
-    h2{font-family:var(--font-heading);font-size:var(--text-xl);max-width:14ch;letter-spacing:-.02em}
-    h3{font-size:1.2rem}
-    .lead{margin-top:1rem;max-width:40rem;color:var(--color-text-muted);font-size:var(--text-lg)}
-    .cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.75rem}
-    .hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.75rem;max-width:42rem}
-    .stat,.card,.step,.contact-card,.side-box,.problem-main,.about-left-large{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:1.25rem;box-shadow:var(--shadow-sm)}
-    .stat{padding:1rem;height:100%}
-    .stat strong{display:block;font-size:var(--text-sm);margin-bottom:.25rem}
-    .stat span,.card p,.step p,.section-copy,.contact-card p,.side-box li,.about-fill span{color:var(--color-text-muted)}
-    .hero-side{padding:1.2rem;border-radius:1.5rem;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.09);box-shadow:var(--shadow-lg);display:grid;grid-template-rows:auto auto 1fr}
-    .hero-side img,.feature-image{border-radius:1rem;object-fit:cover;width:100%}
-    .hero-side h3{margin-top:1rem}
-    .feature-list{display:grid;gap:.8rem;margin-top:1rem}
-    .feature-item{padding:.95rem 1rem;border-radius:1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
-    .feature-item strong{display:block;font-size:var(--text-sm);margin-bottom:.2rem}
-    section{padding:3.75rem 0}
-    .section-top{display:grid;gap:.85rem;margin-bottom:1.8rem}
-    .section-top.centered{max-width:52rem;margin-inline:auto;text-align:center}
-    .section-top.centered h2,.section-top.centered .section-copy{max-width:none}
-    .section-copy{max-width:42rem;margin:0}
-    .grid-2,.contact-grid{display:grid;gap:1.25rem}
-    .cards-3{display:grid;gap:1rem;grid-template-columns:repeat(3,minmax(0,1fr))}
-    .card,.contact-card,.step{padding:1.35rem}
-    .card p,.step p{margin:.7rem 0 0}
-    .problem-layout{display:grid;gap:1.25rem;align-items:stretch}
-    .problem-main{padding:1.35rem;display:flex;flex-direction:column;justify-content:space-between}
-    .problem-side{display:grid;gap:1.25rem;grid-template-rows:1fr 1fr}
-    .problem-side .card{height:100%;display:flex;align-items:center}
-    .steps{display:grid;gap:1rem}
-    .step-num{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.14em;color:var(--color-primary);font-weight:800}
-    .side-box{padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between;min-height:100%}
-    .mini-proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-top:1.25rem}
-    .mini-proof{padding:1rem;border-radius:1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
-    .mini-proof strong{display:block;font-size:var(--text-sm);margin-bottom:.25rem;font-family:var(--font-heading)}
-    .quote-box{margin-top:1.25rem;padding:1rem 1.1rem;border-left:3px solid var(--color-primary);background:rgba(255,255,255,.03);border-radius:0 1rem 1rem 0;color:var(--color-text-muted)}
-    .about-grid-equal{display:grid;gap:1.25rem;align-items:start}
-    .about-left-large{padding:1.5rem;display:flex;flex-direction:column;justify-content:flex-start}
-    .about-left-large h2{font-size:clamp(2rem,1.7rem + 1vw,2.6rem);max-width:12ch}
-    .about-left-large p{font-size:1.12rem;line-height:1.74}
-    .about-right-stack{display:grid;gap:1.25rem;grid-template-rows:auto auto}
-    .about-right-stack .card{height:auto;display:flex;flex-direction:column;justify-content:flex-start}
-    .about-right-stack .card h3,.about-fill strong{font-size:1.45rem}
-    .about-right-stack .card p,.about-fill span{font-size:1.12rem;line-height:1.74}
-    .about-right-stack .card img{max-width:none;width:100%;aspect-ratio:16/9;object-fit:cover}
-    .about-fill{padding:1.5rem;border-radius:1.25rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);margin-top:1.2rem}
-    .about-fill strong{display:block;margin-bottom:.35rem;font-family:var(--font-heading);color:var(--color-text)}
-    .card img{max-width:220px;margin-bottom:1rem}
-    .contact-label{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.14em;color:var(--color-text-faint)}
-    .contact-value{font-size:var(--text-base);font-weight:700;margin-top:.2rem}
-    footer{padding:2rem 0 3rem;color:var(--color-text-faint);font-size:var(--text-sm)}
-    @media (min-width: 920px){
-      .hero-grid{grid-template-columns:1.1fr .9fr}
-      .grid-2{grid-template-columns:1fr 1fr}
-      .about-grid-equal{grid-template-columns:1.08fr .92fr}
-      .problem-layout{grid-template-columns:1.05fr .95fr}
-      .contact-grid{grid-template-columns:1fr .85fr}
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+    body {
+      font-family: var(--f-body);
+      font-size: var(--text-base);
+      line-height: 1.68;
+      background: var(--navy);
+      color: var(--ink);
     }
-    @media (max-width: 900px){
-      .cards-3{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .mini-proof-grid,.hero-bottom{grid-template-columns:1fr}
-      .problem-side,.about-right-stack{grid-template-rows:none}
+    img { display: block; max-width: 100%; height: auto; }
+    a   { text-decoration: none; color: inherit; }
+
+    /* ambient glow */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 18% -8%,  rgba(201,152,42,.055) 0%, transparent 58%),
+        radial-gradient(ellipse 55% 40% at 82% 108%, rgba(201,152,42,.035) 0%, transparent 52%);
     }
-    @media (max-width: 640px){
-      .actions{justify-content:flex-start}
-      .cta-row,.btn{width:100%}
-      .btn{display:flex}
-      .hero-bottom,.cards-3{grid-template-columns:1fr}
+
+    .wrap { position: relative; z-index: 1; width: min(calc(100% - 2.5rem), var(--max-w)); margin-inline: auto; }
+
+    /* ─── SKIP LINK ─────────────────────── */
+    .skip { position: absolute; left: -9999px; }
+    .skip:focus { left: 1rem; top: 1rem; z-index: 200; padding: .6rem 1rem; background: var(--gold); color: var(--ink-inv); border-radius: .5rem; }
+
+    /* ─── HEADER ────────────────────────── */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(7,17,31,.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0; }
+
+    .brand { display: flex; align-items: center; gap: .85rem; }
+    .logo-mark {
+      width: 42px; height: 42px; border-radius: 12px; flex-shrink: 0;
+      display: grid; place-items: center;
+      background: linear-gradient(140deg, #9f6e16 0%, #c9982a 45%, #e8b84b 80%, #f5d98a 100%);
+      box-shadow: var(--sh-gold);
+    }
+    .brand-text strong { display: block; font-family: var(--f-head); font-weight: 800; font-size: .975rem; letter-spacing: .005em; }
+    .brand-text span   { display: block; font-size: var(--text-xs); color: var(--ink-2); margin-top: .1rem; }
+
+    .nav-right { display: flex; align-items: center; gap: .85rem; }
+    .nav-phone { font-size: var(--text-sm); color: var(--ink-2); transition: color .18s; }
+    .nav-phone:hover { color: var(--gold-lt); }
+
+    /* ─── BUTTONS ───────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
+      min-height: 48px; padding: .85rem 1.6rem;
+      border-radius: var(--r-pill);
+      font-family: var(--f-head); font-size: var(--text-sm); font-weight: 700;
+      white-space: nowrap; transition: all .18s cubic-bezier(.16,1,.3,1);
+      cursor: pointer; border: none;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #a6711a 0%, #c9982a 40%, #dba93a 100%);
+      color: var(--ink-inv);
+      box-shadow: var(--sh-gold), inset 0 1px 0 rgba(255,255,255,.16);
+    }
+    .btn-gold:hover { background: linear-gradient(135deg, #c9982a 0%, #dba93a 50%, #ecc860 100%); transform: translateY(-2px); box-shadow: 0 8px 36px rgba(201,152,42,.42); }
+    .btn-ghost {
+      border: 1px solid var(--border-s);
+      background: rgba(255,255,255,.05);
+      color: var(--ink);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,.09); border-color: var(--gold-border); color: var(--gold-pale); }
+    .btn-lg { min-height: 54px; padding: 1rem 2rem; font-size: var(--text-base); }
+
+    /* ─── KICKER ────────────────────────── */
+    .kicker {
+      display: inline-flex; align-items: center;
+      padding: .35rem .85rem;
+      border-radius: var(--r-pill);
+      background: var(--gold-bg); border: 1px solid var(--gold-border);
+      color: var(--gold-lt);
+      font-family: var(--f-head); font-size: var(--text-xs); font-weight: 800;
+      letter-spacing: .1em; text-transform: uppercase;
+    }
+
+    /* ─── DIVIDER ───────────────────────── */
+    .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-border), transparent); }
+    .gold-bar { width: 44px; height: 3px; background: linear-gradient(90deg, var(--gold), transparent); border-radius: 2px; }
+
+    /* ─── SECTION BASE ──────────────────── */
+    section { padding: 4.5rem 0; }
+    .s-head { display: grid; gap: .8rem; }
+    .s-head.center { max-width: 54rem; margin-inline: auto; text-align: center; }
+
+    /* ─── TYPE ──────────────────────────── */
+    h1,h2,h3,h4 { font-family: var(--f-head); line-height: 1.05; }
+    h1 { font-size: var(--text-2xl); font-weight: 900; letter-spacing: -.035em; }
+    h2 { font-size: var(--text-xl);  font-weight: 800; letter-spacing: -.028em; max-width: 16ch; }
+    h3 { font-size: 1.15rem; font-weight: 700; }
+    p  { color: var(--ink-2); }
+    .lead { font-size: var(--text-lg); color: var(--ink-2); line-height: 1.68; max-width: 40rem; margin-top: .9rem; }
+    .copy { color: var(--ink-2); max-width: 44rem; }
+
+    /* ─── CARDS ─────────────────────────── */
+    .card {
+      background: var(--navy-card); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 1.5rem;
+      transition: border-color .22s, background .22s;
+    }
+    .card:hover { border-color: var(--gold-border); background: var(--navy-card-h); }
+    .card h3 { color: var(--ink); }
+    .card p  { margin: 0; }
+
+    /* ─── HERO ──────────────────────────── */
+    .hero { padding: 5rem 0 4rem; }
+    .hero-grid { display: grid; gap: 2.5rem; align-items: stretch; }
+
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+    .hero-trust { display: flex; align-items: center; gap: 1.25rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: .45rem; font-size: var(--text-xs); color: var(--ink-2); }
+    .trust-dot  { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+    .hero-panel {
+      border-radius: var(--r-xl);
+      background: linear-gradient(175deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.02) 100%);
+      border: 1px solid var(--border-s);
+      box-shadow: var(--sh-lg);
+      padding: 1.4rem;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .hero-panel img { border-radius: 1rem; object-fit: cover; width: 100%; aspect-ratio: 16/9; }
+    .panel-title { font-family: var(--f-head); font-weight: 700; color: var(--ink); font-size: 1rem; }
+    .feature-list { display: grid; gap: .65rem; }
+    .f-item {
+      display: flex; align-items: flex-start; gap: .75rem;
+      background: var(--navy-card); border: 1px solid var(--border);
+      border-radius: 1rem; padding: .85rem 1rem;
+    }
+    .f-icon {
+      width: 34px; height: 34px; border-radius: 9px; flex-shrink: 0;
+      display: grid; place-items: center;
+      background: var(--gold-bg); border: 1px solid var(--gold-border);
+      font-size: .9rem;
+    }
+    .f-item strong { display: block; font-family: var(--f-head); font-size: var(--text-sm); font-weight: 700; color: var(--ink); }
+    .f-item span   { display: block; font-size: var(--text-xs); color: var(--ink-2); margin-top: .1rem; }
+
+    /* ─── STATS BAR ─────────────────────── */
+    .stats-bar { padding: 2.5rem 0; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+    .stat-item { background: var(--navy-mid); padding: 1.75rem 1.5rem; text-align: center; }
+    .stat-num  { display: block; font-family: var(--f-head); font-size: clamp(2rem, 1.6rem + 1vw, 2.8rem); font-weight: 900; color: var(--gold-lt); letter-spacing: -.04em; line-height: 1; }
+    .stat-label{ display: block; font-size: var(--text-sm); color: var(--ink-2); margin-top: .4rem; line-height: 1.4; }
+
+    /* ─── PROBLEM ───────────────────────── */
+    .problem-grid { display: grid; gap: 1.25rem; }
+    .problem-big {
+      background: var(--navy-card); border: 1px solid var(--border); border-radius: var(--r-xl);
+      padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem; justify-content: space-between;
+    }
+    .problem-big h2 { max-width: 100%; }
+    .problem-big .copy { max-width: none; }
+    .problem-col { display: grid; gap: 1.25rem; }
+
+    /* ─── FEATURES GRID ─────────────────── */
+    .feat-grid { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 2.5rem; }
+    .feat-card { display: flex; flex-direction: column; gap: .65rem; }
+    .feat-icon { font-size: 1.35rem; margin-bottom: .2rem; }
+
+    /* ─── HOW IT WORKS ──────────────────── */
+    .how-grid { display: grid; gap: 2rem; }
+    .steps { display: grid; gap: .9rem; margin-top: 1.5rem; }
+    .step {
+      display: flex; gap: 1.1rem; align-items: flex-start;
+      background: var(--navy-card); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 1.25rem 1.35rem;
+      transition: border-color .22s;
+    }
+    .step:hover { border-color: var(--gold-border); }
+    .step-num {
+      width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
+      display: grid; place-items: center;
+      background: var(--gold-bg); border: 1px solid var(--gold-border);
+      font-family: var(--f-head); font-weight: 900; font-size: .85rem; color: var(--gold-lt);
+    }
+    .step-body h3 { color: var(--ink); margin-bottom: .3rem; }
+    .step-body p  { margin: 0; font-size: var(--text-sm); }
+
+    .why-box {
+      background: var(--navy-card); border: 1px solid var(--border); border-radius: var(--r-xl);
+      padding: 1.85rem; display: flex; flex-direction: column; gap: 1.5rem;
+    }
+    .check-list { display: grid; gap: .7rem; list-style: none; }
+    .check-list li { display: flex; align-items: flex-start; gap: .7rem; font-size: var(--text-sm); color: var(--ink-2); line-height: 1.6; }
+    .check-list li::before { content: '✓'; color: var(--gold-lt); font-weight: 800; font-family: var(--f-head); flex-shrink: 0; margin-top: .05em; }
+
+    .proof-pair { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
+    .proof-card {
+      background: var(--gold-bg); border: 1px solid var(--gold-border);
+      border-radius: 1rem; padding: 1rem 1.1rem;
+    }
+    .proof-card strong { display: block; font-family: var(--f-head); font-weight: 700; color: var(--ink); font-size: var(--text-sm); }
+    .proof-card span   { display: block; color: var(--ink-2); font-size: var(--text-xs); margin-top: .2rem; }
+
+    .pullquote {
+      border-left: 3px solid var(--gold);
+      background: rgba(201,152,42,.06); border-radius: 0 1rem 1rem 0;
+      padding: 1rem 1.2rem;
+      font-style: italic; color: var(--ink-2); font-size: var(--text-sm); line-height: 1.72;
+    }
+
+    /* ─── PRICING ───────────────────────── */
+    .pricing-grid { display: grid; gap: 1.25rem; margin-top: 2.5rem; }
+    .price-card {
+      background: var(--navy-card); border: 1px solid var(--border);
+      border-radius: var(--r-xl); padding: 1.85rem;
+      display: flex; flex-direction: column; gap: 1.25rem;
+      position: relative; overflow: hidden;
+    }
+    .price-card.featured {
+      border-color: var(--gold-border);
+      background: linear-gradient(180deg, rgba(201,152,42,.07) 0%, rgba(201,152,42,.02) 100%);
+    }
+    .price-card.featured::before {
+      content: 'Most Popular';
+      position: absolute; top: 1.25rem; right: 1.25rem;
+      padding: .25rem .75rem; border-radius: var(--r-pill);
+      background: var(--gold); color: var(--ink-inv);
+      font-family: var(--f-head); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+    }
+    .price-tier  { font-family: var(--f-head); font-weight: 800; font-size: 1.1rem; color: var(--ink); }
+    .price-sub   { font-size: var(--text-sm); color: var(--ink-2); margin-top: .2rem; }
+    .price-num   { font-family: var(--f-head); font-weight: 900; font-size: clamp(2.2rem, 1.8rem + 1vw, 3rem); color: var(--ink); letter-spacing: -.04em; line-height: 1; }
+    .price-num span { font-size: 1.1rem; font-weight: 600; color: var(--ink-2); vertical-align: top; margin-top: .55rem; display: inline-block; }
+    .price-per   { font-size: var(--text-sm); color: var(--ink-2); }
+    .price-features { display: grid; gap: .55rem; list-style: none; flex: 1; }
+    .price-features li { display: flex; align-items: flex-start; gap: .65rem; font-size: var(--text-sm); color: var(--ink-2); line-height: 1.55; }
+    .price-features li::before { content: '✓'; color: var(--gold-lt); font-weight: 800; font-family: var(--f-head); flex-shrink: 0; }
+    .price-note { font-size: var(--text-xs); color: var(--ink-3); padding-top: .75rem; border-top: 1px solid var(--border); }
+
+    /* ─── ABOUT ─────────────────────────── */
+    .about-grid { display: grid; gap: 1.5rem; }
+    .about-main {
+      background: var(--navy-card); border: 1px solid var(--border); border-radius: var(--r-xl);
+      padding: 2.25rem; display: flex; flex-direction: column; gap: 1.5rem; justify-content: space-between;
+    }
+    .about-main h2 { max-width: 100%; font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.6rem); }
+    .about-main .copy { max-width: none; }
+    .about-stack { display: grid; gap: 1.25rem; }
+
+    .fit-box {
+      background: var(--gold-bg); border: 1px solid var(--gold-border);
+      border-radius: 1.1rem; padding: 1.25rem 1.4rem;
+    }
+    .fit-box strong { display: block; font-family: var(--f-head); font-weight: 700; color: var(--gold-pale); font-size: 1rem; margin-bottom: .4rem; }
+    .fit-box span   { color: var(--ink-2); font-size: var(--text-sm); line-height: 1.72; }
+
+    /* ─── FINAL CTA ─────────────────────── */
+    .cta-section {
+      background: linear-gradient(140deg, #0d1f35 0%, #091526 100%);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .cta-inner { display: grid; gap: 2rem; }
+    .cta-headline { font-size: clamp(1.8rem, 1.3rem + 1.5vw, 2.8rem); font-weight: 900; font-family: var(--f-head); letter-spacing: -.03em; max-width: 18ch; line-height: 1.08; }
+    .cta-sub { color: var(--ink-2); max-width: 40rem; font-size: var(--text-lg); margin-top: .75rem; }
+    .cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.75rem; }
+
+    .contact-block { display: grid; gap: 1rem; }
+    .contact-row { display: flex; flex-direction: column; gap: .15rem; }
+    .c-label { font-family: var(--f-head); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .14em; color: var(--ink-3); }
+    .c-val   { font-family: var(--f-head); font-size: 1rem; font-weight: 700; color: var(--ink); }
+    .c-val a:hover { color: var(--gold-lt); }
+
+    /* ─── FOOTER ────────────────────────── */
+    footer { padding: 2rem 0 2.5rem; border-top: 1px solid var(--border); }
+    .foot-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .foot-inner span { font-size: var(--text-sm); color: var(--ink-3); }
+
+    /* ─── RESPONSIVE ────────────────────── */
+    @media (min-width: 960px) {
+      .hero-grid    { grid-template-columns: 1.15fr .85fr; }
+      .how-grid     { grid-template-columns: 1fr 1fr; }
+      .about-grid   { grid-template-columns: 1.1fr .9fr; }
+      .problem-grid { grid-template-columns: 1.05fr .95fr; }
+      .cta-inner    { grid-template-columns: 1fr .7fr; align-items: center; }
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .stats-grid  { grid-template-columns: repeat(2, 1fr); }
+      .feat-grid   { grid-template-columns: repeat(2, 1fr); }
+      .proof-pair  { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .feat-grid   { grid-template-columns: 1fr; }
+      .stats-grid  { grid-template-columns: repeat(2, 1fr); }
+      .hero-cta .btn { width: 100%; }
+      .cta-btns .btn { width: 100%; }
+      .foot-inner  { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ─── HEADER ─────────────────────────────────── -->
   <header class="site-header">
-    <div class="container nav">
-      <a href="#top" class="brand" aria-label="ABC Prime Services home">
-        <div class="logo" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 18L10 6L14 14L19 6" stroke="#0f1b2f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <div class="wrap nav">
+      <a href="#top" class="brand" aria-label="ABC Prime Lead Desk home">
+        <div class="logo-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M4 19L9 5L14 14L19 5" stroke="#07111f" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <div>
-          <strong>ABC Prime Services</strong>
-          <span>Lead conversion systems for contractors and home services</span>
+        <div class="brand-text">
+          <strong>ABC Prime Lead Desk</strong>
+          <span>Lead conversion for contractors &amp; home services</span>
         </div>
       </a>
-      <div class="actions">
-        <a class="phone-link" href="tel:+17547043838">Call (754) 704-3838</a>
-        <a class="btn btn-primary" href="https://calendar.app.google/RoE28gSBTsVm8uyk6" target="_blank" rel="noopener noreferrer">Book a Call</a>
+      <div class="nav-right">
+        <a class="nav-phone" href="tel:+17547043838">(754) 704-3838</a>
+        <a class="btn btn-gold" href="https://calendar.app.google/RoE28gSBTsVm8uyk6" target="_blank" rel="noopener noreferrer">Book a Call</a>
       </div>
     </div>
   </header>
 
   <main id="main">
+
+    <!-- ─── HERO ──────────────────────────────────── -->
     <section class="hero" id="top">
-      <div class="container hero-grid">
+      <div class="wrap hero-grid">
         <div>
-          <div class="section-kicker">Florida-based • Contractor and home service lead conversion</div>
-          <h1>Stop losing leads to missed calls and slow follow-up.</h1>
-          <p class="lead">ABC Prime Services helps contractors and home service businesses capture more opportunities, respond faster, and book more estimates with AI-powered lead conversion systems.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://calendar.app.google/RoE28gSBTsVm8uyk6" target="_blank" rel="noopener noreferrer">Book a Free Strategy Call</a>
-            <a class="btn btn-secondary" href="tel:+17547043838">Call (754) 704-3838</a>
+          <div class="kicker">Florida · Contractors &amp; Home Service Businesses</div>
+          <h1 style="margin-top:.9rem;">Every missed call is a job someone else booked.</h1>
+          <p class="lead">ABC Prime Lead Desk installs a done-for-you AI system that answers the phone when you can't, follows up automatically, and keeps leads moving toward a booked estimate — so you stop bleeding revenue you already earned.</p>
+          <div class="hero-cta">
+            <a class="btn btn-gold btn-lg" href="https://calendar.app.google/RoE28gSBTsVm8uyk6" target="_blank" rel="noopener noreferrer">Book a Free Strategy Call</a>
           </div>
-          <div class="hero-bottom">
-            <div class="stat"><strong>Built for field-first businesses</strong><span>Ideal for teams that cannot always answer the phone in real time.</span></div>
-            <div class="stat"><strong>Focused on real revenue leaks</strong><span>Missed calls, delayed responses, weak follow-up, and lost booking opportunities.</span></div>
+          <div class="hero-trust">
+            <div class="trust-item"><div class="trust-dot"></div>Done-for-you setup</div>
+            <div class="trust-item"><div class="trust-dot"></div>No long-term contracts</div>
+            <div class="trust-item"><div class="trust-dot"></div>Live in under a week</div>
+            <div class="trust-item"><div class="trust-dot"></div>Florida-based</div>
           </div>
         </div>
 
-        <aside class="hero-side">
-          <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/e44a6bf33b5aa8dcfe2d23ffc22ddae69051c0d0.jpg" alt="Electrical service team standing in front of a company van" width="2048" height="1123" loading="lazy" />
-          <h3>What the system handles</h3>
+        <aside class="hero-panel">
+          <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/e44a6bf33b5aa8dcfe2d23ffc22ddae69051c0d0.jpg" alt="Home service team in front of company van" width="2048" height="1123" loading="eager" />
+          <p class="panel-title">What the system does for you</p>
           <div class="feature-list">
-            <div class="feature-item"><strong>Missed-call text back</strong><span>Keep leads warm when the phone is not answered.</span></div>
-            <div class="feature-item"><strong>Instant lead response</strong><span>Reply quickly to calls, forms, and new inquiries.</span></div>
-            <div class="feature-item"><strong>Automated follow-up</strong><span>Stay in touch until the prospect books or replies.</span></div>
-            <div class="feature-item"><strong>Booking + reminders</strong><span>Route qualified leads into a cleaner scheduling flow.</span></div>
+            <div class="f-item">
+              <div class="f-icon">📞</div>
+              <div><strong>Missed-call text back</strong><span>Responds in seconds so the lead doesn't dial your competitor.</span></div>
+            </div>
+            <div class="f-item">
+              <div class="f-icon">⚡</div>
+              <div><strong>Instant lead response</strong><span>Replies to forms, calls, and inquiries under 60 seconds.</span></div>
+            </div>
+            <div class="f-item">
+              <div class="f-icon">🔁</div>
+              <div><strong>Automated follow-up</strong><span>7-day SMS + email sequence that works while you're on the job.</span></div>
+            </div>
+            <div class="f-item">
+              <div class="f-icon">📅</div>
+              <div><strong>Booking + reminders</strong><span>Qualified leads self-book. Reminders cut no-shows by 30–50%.</span></div>
+            </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section>
-      <div class="container">
-        <div class="section-top" style="margin-bottom:1.25rem;">
-          <div class="section-kicker">The problem</div>
+    <div class="divider"></div>
+
+    <!-- ─── STATS BAR ──────────────────────────────── -->
+    <div class="stats-bar">
+      <div class="wrap">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-num">62%</span>
+            <span class="stat-label">of calls to small<br>businesses go unanswered</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">7×</span>
+            <span class="stat-label">more likely to qualify a lead<br>if you respond within 1 hour</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">$390K+</span>
+            <span class="stat-label">annual revenue lost from<br>just 5 missed calls per week</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">8×</span>
+            <span class="stat-label">drop in conversion rate<br>after just 5 minutes of delay</span>
+          </div>
         </div>
-        <div class="problem-layout">
-          <div class="problem-main">
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ─── PROBLEM ────────────────────────────────── -->
+    <section>
+      <div class="wrap">
+        <div class="s-head" style="margin-bottom:1.5rem;">
+          <div class="kicker">The Problem</div>
+          <div class="gold-bar"></div>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-big">
             <div>
-              <h2>Good jobs are often lost between the first call and the next step.</h2>
-              <p class="section-copy" style="margin-top:1rem;max-width:none;">Many contractors and home service operators are in the field, on another job, or handling too much at once. The result is simple: missed calls, delayed callbacks, inconsistent follow-up, and leads that go cold before anyone responds.</p>
+              <h2>You're already generating leads. You're just losing too many of them.</h2>
+              <p class="copy" style="margin-top:1rem;max-width:none;">Contractors and home service operators are in the field, on a ladder, under a sink, or managing a crew. Nobody's sitting at a desk waiting to answer calls. The lead calls, nobody picks up, and they move on to the next name on Google. That's not a marketing problem — that's a response problem. And it's completely fixable.</p>
             </div>
-            <div class="card" style="margin-top:1.25rem;">
-              <h3>What usually happens</h3>
-              <p>A prospect calls, nobody answers, they move on, or a form comes in and sits too long without the right response.</p>
+            <div class="card" style="margin:0;">
+              <h3>What's actually happening right now</h3>
+              <p>A homeowner needs an HVAC tune-up. They call three numbers. The first one that calls back gets the job. If that's not you — it's your competitor.</p>
             </div>
           </div>
-          <div class="problem-side">
-            <div class="card">
-              <div>
-                <h3>What should happen</h3>
-                <p>The lead gets a fast response, receives follow-up automatically, and is guided toward a booked estimate or conversation.</p>
-              </div>
+          <div class="problem-col">
+            <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;gap:.65rem;height:100%;">
+              <h3>What should be happening</h3>
+              <p>The moment a call is missed, the lead gets a text. They reply. They book. You show up. The system handled the rest while you finished the job you were already on.</p>
             </div>
-            <div class="card">
-              <div>
-                <strong style="display:block;font-family:var(--font-heading);font-size:var(--text-sm);margin-bottom:.45rem;">The shift</strong>
-                <p style="margin:0;color:var(--color-text-muted);">Move from reactive callbacks to a faster, more structured lead-handling process that keeps more opportunities alive.</p>
-              </div>
+            <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;gap:.65rem;height:100%;">
+              <strong style="font-family:var(--f-head);font-size:var(--text-sm);font-weight:700;color:var(--gold-lt);">The real cost</strong>
+              <p style="margin:0;">One missed call in roofing is worth $8,000–$25,000. In HVAC it's $3,000–$12,000. Most businesses miss 30–50% of their inbound calls. The math is brutal.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <div class="divider"></div>
+
+    <!-- ─── WHAT'S INCLUDED ────────────────────────── -->
     <section>
-      <div class="container">
-        <div class="section-top centered">
-          <div class="section-kicker">What’s included</div>
-          <h2>A practical system built around lead capture, response, and booking.</h2>
-          <p class="section-copy">ABC Prime installs a simple lead conversion system that helps contractors and home service businesses protect revenue already coming into the business.</p>
+      <div class="wrap">
+        <div class="s-head center">
+          <div class="kicker">What's Included</div>
+          <h2 style="max-width:none;">Everything your leads need to go from inquiry to booked — automatically.</h2>
+          <p class="copy" style="max-width:none;margin-top:.5rem;">We build the system, connect your lead sources, write the messages, and run it for you. You don't touch any software.</p>
         </div>
-        <div class="cards-3">
-          <div class="card"><h3>Missed-call recovery</h3><p>Automatic text-back when a call is missed so the prospect hears from the business fast.</p></div>
-          <div class="card"><h3>Lead response automation</h3><p>Fast first-touch follow-up for new inquiries from phone calls, forms, or other lead sources.</p></div>
-          <div class="card"><h3>Follow-up sequences</h3><p>Automated outreach that keeps leads moving instead of getting forgotten after the first contact.</p></div>
-          <div class="card"><h3>Booking flow</h3><p>Simple scheduling path to help qualified leads book a call, estimate, or next step.</p></div>
-          <div class="card"><h3>Reminder support</h3><p>Appointment reminders and confirmation steps to reduce no-shows and confusion.</p></div>
-          <div class="card"><h3>Simple visibility</h3><p>A cleaner view of where leads are coming from and what happens after they reach out.</p></div>
+        <div class="feat-grid">
+          <div class="card feat-card">
+            <div class="feat-icon">📞</div>
+            <h3>Missed-call text back</h3>
+            <p>Instant SMS reply the moment a call goes unanswered. Keeps the lead warm before they dial someone else.</p>
+          </div>
+          <div class="card feat-card">
+            <div class="feat-icon">⚡</div>
+            <h3>Lead response automation</h3>
+            <p>Every new lead from Google, Facebook, Angi, or your website gets a personalized reply under 60 seconds.</p>
+          </div>
+          <div class="card feat-card">
+            <div class="feat-icon">🔁</div>
+            <h3>7-day follow-up sequence</h3>
+            <p>SMS + email cadence that keeps nurturing leads who don't respond on the first touch. Stops when they book.</p>
+          </div>
+          <div class="card feat-card">
+            <div class="feat-icon">📅</div>
+            <h3>Booking flow</h3>
+            <p>Qualified leads self-schedule into your calendar. No phone tag, no back-and-forth.</p>
+          </div>
+          <div class="card feat-card">
+            <div class="feat-icon">🔔</div>
+            <h3>Appointment reminders</h3>
+            <p>Automated SMS + email reminders 24 hours and 1 hour before the job. Reduces no-shows by 30–50%.</p>
+          </div>
+          <div class="card feat-card">
+            <div class="feat-icon">📊</div>
+            <h3>Lead pipeline dashboard</h3>
+            <p>One screen showing every lead, where they came from, and what stage they're at. Full visibility, zero effort.</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <div class="divider"></div>
+
+    <!-- ─── HOW IT WORKS ───────────────────────────── -->
     <section>
-      <div class="container grid-2">
+      <div class="wrap how-grid">
         <div>
-          <div class="section-top">
-            <div class="section-kicker">How it works</div>
-            <h2>Simple to launch. Built to improve over time.</h2>
-            <p class="section-copy">We keep the process straightforward so you can get a working system in place quickly and improve it as real leads come through.</p>
+          <div class="s-head">
+            <div class="kicker">How It Works</div>
+            <div class="gold-bar"></div>
+            <h2>You're live in under a week. Then it runs itself.</h2>
+            <p class="copy">We do the entire setup. You don't need to learn any software or change how you work.</p>
           </div>
           <div class="steps">
-            <div class="step"><div class="step-num">Step 01</div><h3>Audit the gaps</h3><p>We look at how calls, new leads, and follow-up are handled today and identify the biggest leaks first.</p></div>
-            <div class="step"><div class="step-num">Step 02</div><h3>Install the system</h3><p>We set up the response flow, missed-call handling, follow-up logic, and booking path around your business.</p></div>
-            <div class="step"><div class="step-num">Step 03</div><h3>Optimize from live activity</h3><p>Once leads start coming through, we refine the messaging, timing, and handoff process for better results.</p></div>
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-body">
+                <h3>Strategy call</h3>
+                <p>We map your current lead flow, find the biggest gaps, and build a plan around your specific business — not a template.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-body">
+                <h3>We build and connect everything</h3>
+                <p>We set up your phone number, connect your lead sources, write the messages, and configure the automation. You review and approve.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-body">
+                <h3>Go live — system handles it</h3>
+                <p>Real leads come in, the system responds and follows up. You get notifications for leads that are ready to talk. We optimize monthly.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="side-box">
+        <div class="why-box">
           <div>
-            <h3>Why this works for home service businesses</h3>
-            <ul>
-              <li>Phone calls often happen while the owner or tech is on a job.</li>
-              <li>Fast response matters more than complicated marketing theory.</li>
-              <li>Better follow-up creates value from leads you are already paying for or earning.</li>
-              <li>Automation helps protect opportunities without adding full-time office overhead.</li>
+            <h3 style="color:var(--ink);margin-bottom:1rem;">Why this works when everything else didn't</h3>
+            <ul class="check-list">
+              <li>Speed is the only thing that matters — we respond in seconds, not hours.</li>
+              <li>Follow-up is automatic — 80% of deals close on the 2nd through 5th contact.</li>
+              <li>It's done for you — no software to learn, no campaigns to manage.</li>
+              <li>Built around your business — your phone number, your calendar, your messages.</li>
+              <li>No wasted ad spend — we convert leads you're already paying for or earning.</li>
             </ul>
           </div>
           <div>
-            <div class="mini-proof-grid">
-              <div class="mini-proof"><strong>Faster first touch</strong><span>Respond quickly before the lead moves on.</span></div>
-              <div class="mini-proof"><strong>Less lead leakage</strong><span>Reduce the drop-off between inquiry and booking.</span></div>
+            <div class="proof-pair">
+              <div class="proof-card">
+                <strong>Under 60 seconds</strong>
+                <span>Average first response time to a new inquiry</span>
+              </div>
+              <div class="proof-card">
+                <strong>30–50% fewer no-shows</strong>
+                <span>With automated appointment reminders</span>
+              </div>
             </div>
-            <div class="quote-box">Good operators already work hard to generate calls. The real opportunity is making sure more of those calls turn into booked conversations.</div>
+            <div class="pullquote" style="margin-top:.9rem;">"Most home service businesses already have enough leads coming in. The problem is how many of those leads fall through the cracks before anyone follows up."</div>
           </div>
         </div>
       </div>
     </section>
 
+    <div class="divider"></div>
+
+    <!-- ─── PRICING ────────────────────────────────── -->
     <section>
-      <div class="container about-grid-equal">
-        <div class="about-left-large">
-          <div class="section-top" style="margin-bottom:1.1rem;">
-            <div class="section-kicker">Why ABC Prime</div>
-            <h2>Built for real business operators, not shiny AI demos.</h2>
-            <p class="section-copy">ABC Prime Services focuses on practical systems that help small businesses respond faster, stay organized, and convert more opportunities. The goal is simple: less wasted time, fewer lost leads, and better operational follow-through.</p>
-            <p class="section-copy">We use AI and automation behind the scenes where they create leverage, but the offer stays grounded in business results home service businesses actually care about.</p>
+      <div class="wrap">
+        <div class="s-head center">
+          <div class="kicker">Pricing</div>
+          <h2 style="max-width:none;">Simple, transparent pricing. No surprises.</h2>
+          <p class="copy" style="max-width:none;margin-top:.5rem;">One missed roofing job pays for a full year of Lead Desk. Every tier includes full setup, done-for-you management, and monthly optimization. Cancel anytime.</p>
+        </div>
+        <div class="pricing-grid">
+
+          <!-- Tier 1 -->
+          <div class="price-card">
+            <div>
+              <div class="price-tier">Lead Guard</div>
+              <div class="price-sub">Best for solo operators &amp; small crews</div>
+            </div>
+            <div>
+              <div class="price-num"><span>$</span>297</div>
+              <div class="price-per">per month</div>
+            </div>
+            <ul class="price-features">
+              <li>Missed-call text back</li>
+              <li>Lead response automation (SMS)</li>
+              <li>2-step follow-up sequence</li>
+              <li>Booking link integration</li>
+              <li>Monthly strategy check-in</li>
+            </ul>
+            <div class="price-note">Best for: handyman, cleaning, pest control, solo contractors</div>
+            <a class="btn btn-ghost" href="https://calendar.app.google/RoE28gSBTsVm8uyk6" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:.25rem;">Get Started</a>
           </div>
-          <div class="about-fill">
-            <strong>Best fit clients</strong>
-            <span>HVAC, plumbing, electrical, roofing, handyman, cleaning, pest control, appliance repair, garage door, pool, landscaping, and other service businesses that rely on calls, form submissions, and quick follow-up to win work.</span>
+
+          <!-- Tier 2 — Featured -->
+          <div class="price-card featured">
+            <div>
+              <div class="price-tier">Lead Desk Pro</div>
+              <div class="price-sub">Best for established home service businesses</div>
+            </div>
+            <div>
+              <div class="price-num"><span>$</span>497</div>
+              <div class="price-per">per month</div>
+            </div>
+            <ul class="price-features">
+              <li>Everything in Lead Guard</li>
+              <li>Full 7-day SMS + email follow-up</li>
+              <li>Appointment reminders</li>
+              <li>Lead pipeline dashboard</li>
+              <li>Bi-weekly optimization call</li>
+            </ul>
+            <div class="price-note">Best for: HVAC, plumbing, electrical, roofing, landscaping</div>
+            <a class="btn btn-gold" href="https://calendar.app.google/RoE28gSBTsVm8uyk6" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:.25rem;">Get Started</a>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="price-card">
+            <div>
+              <div class="price-tier">Lead Desk Elite</div>
+              <div class="price-sub">Best for high-volume &amp; multi-location businesses</div>
+            </div>
+            <div>
+              <div class="price-num"><span>$</span>797</div>
+              <div class="price-per">per month</div>
+            </div>
+            <ul class="price-features">
+              <li>Everything in Lead Desk Pro</li>
+              <li>AI voice receptionist (answers &amp; qualifies calls)</li>
+              <li>Custom branded client dashboard</li>
+              <li>Lead source reporting</li>
+              <li>Priority support + weekly call</li>
+            </ul>
+            <div class="price-note">Best for: multi-location operators, high-volume businesses</div>
+            <a class="btn btn-ghost" href="https://calendar.app.google/RoE28gSBTsVm8uyk6" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:.25rem;">Get Started</a>
+          </div>
+
+        </div>
+        <p style="text-align:center;margin-top:1.25rem;font-size:var(--text-sm);color:var(--ink-3);">One-time setup fee of $497 — waived when you prepay 3 months. No long-term contracts. Cancel anytime.</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── WHY US ─────────────────────────────────── -->
+    <section>
+      <div class="wrap about-grid">
+        <div class="about-main">
+          <div>
+            <div class="kicker" style="margin-bottom:.9rem;">Why ABC Prime Lead Desk</div>
+            <div class="gold-bar" style="margin-bottom:1rem;"></div>
+            <h2>We focus on revenue, not software demos.</h2>
+            <p class="copy" style="margin-top:.85rem;">ABC Prime Lead Desk is a Florida-based agency that builds and runs lead conversion systems for home service businesses. We're not selling a platform you have to figure out. We build it, manage it, and optimize it for you — so you can stay focused on the work.</p>
+            <p class="copy" style="margin-top:.75rem;">We use AI where it creates real leverage: faster responses, better follow-up, fewer missed opportunities. Everything else stays simple and grounded in results that matter to contractors — more booked estimates, fewer no-shows, less wasted time.</p>
+          </div>
+          <div class="fit-box">
+            <strong>Who we work with</strong>
+            <span>HVAC · Plumbing · Electrical · Roofing · Handyman · Cleaning · Pest Control · Appliance Repair · Garage Door · Pool Service · Landscaping · and other home service businesses across Florida that depend on inbound calls and fast follow-up to win work.</span>
           </div>
         </div>
-        <div class="about-right-stack">
-          <div class="card">
-            <img class="feature-image" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/9a6ec6170c7e70da99fbd22a302951642c20e748.jpg" alt="HVAC technician speaking with a homeowner inside a living room" width="2500" height="3333" loading="lazy" style="max-width:260px;" />
-            <h3>Florida-based focus</h3>
-            <p>Positioned to work with contractors and home service businesses across Florida that depend on inbound calls, fast responses, and a more reliable path from inquiry to booked conversation.</p>
+        <div class="about-stack">
+          <div class="card" style="display:flex;flex-direction:column;gap:.75rem;">
+            <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/9a6ec6170c7e70da99fbd22a302951642c20e748.jpg" alt="HVAC technician with homeowner" style="border-radius:.85rem;width:100%;aspect-ratio:16/9;object-fit:cover;" loading="lazy" />
+            <h3>Florida-based and field-focused</h3>
+            <p style="margin:0;">We understand how home service businesses operate because we work with them every day. The system is built around the reality of field work — not a generic marketing playbook.</p>
           </div>
-          <div class="card">
-            <h3>What you are really buying</h3>
-            <p>A cleaner front-end system for handling leads, reducing response delays, improving consistency, and moving more inquiries toward real conversations instead of missed opportunities.</p>
+          <div class="card" style="display:flex;flex-direction:column;gap:.5rem;">
+            <h3>What you actually get</h3>
+            <p style="margin:0;">A system that works while you're on a job — protecting the leads already coming into your business and making sure more of them turn into paying customers.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container contact-grid">
+    <div class="divider"></div>
+
+    <!-- ─── FINAL CTA ──────────────────────────────── -->
+    <section class="cta-section">
+      <div class="wrap cta-inner">
         <div>
-          <div class="section-top">
-            <div class="section-kicker">Get started</div>
-            <h2>Book a free strategy call and see where your lead flow is leaking.</h2>
-            <p class="section-copy">We’ll look at how your business currently handles missed calls, new inquiries, and follow-up, then identify what a cleaner lead conversion system could look like.</p>
-          </div>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://calendar.app.google/RoE28gSBTsVm8uyk6" target="_blank" rel="noopener noreferrer">Book a Free Strategy Call</a>
-            <a class="btn btn-secondary" href="tel:+17547043838">Call Now</a>
+          <div class="kicker">Get Started</div>
+          <h2 class="cta-headline" style="margin-top:.9rem;">Find out how many leads you're losing — and fix it.</h2>
+          <p class="cta-sub">Book a free 20-minute strategy call. We'll review your current lead flow, show you where the biggest leaks are, and give you a clear picture of what a working system looks like for your business. No pitch, no pressure.</p>
+          <div class="cta-btns">
+            <a class="btn btn-gold btn-lg" href="https://calendar.app.google/RoE28gSBTsVm8uyk6" target="_blank" rel="noopener noreferrer">Book a Free Strategy Call</a>
+            <a class="btn btn-ghost btn-lg" href="tel:+17547043838">Call (754) 704-3838</a>
           </div>
         </div>
-        <div class="contact-card">
-          <div><div class="contact-label">Phone</div><div class="contact-value"><a href="tel:+17547043838">(754) 704-3838</a></div></div>
-          <div style="margin-top:1rem"><div class="contact-label">Direct email</div><div class="contact-value"><a href="mailto:alex@abcprimeservices.com">alex@abcprimeservices.com</a></div></div>
-          <div style="margin-top:1rem"><div class="contact-label">General email</div><div class="contact-value"><a href="mailto:info@abcprimeservices.com">info@abcprimeservices.com</a></div></div>
-          <div style="margin-top:1rem"><div class="contact-label">Location</div><div class="contact-value">Florida</div></div>
+        <div class="contact-block">
+          <div class="contact-row">
+            <div class="c-label">Phone</div>
+            <div class="c-val"><a href="tel:+17547043838">(754) 704-3838</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="c-label">Email</div>
+            <div class="c-val"><a href="mailto:info@abcprimeleaddesk.com">info@abcprimeleaddesk.com</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="c-label">Service Area</div>
+            <div class="c-val">Florida</div>
+          </div>
+          <div class="contact-row">
+            <div class="c-label">Response Time</div>
+            <div class="c-val">Same business day</div>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- ─── FOOTER ─────────────────────────────────── -->
   <footer>
-    <div class="container">© <span id="year"></span> ABC Prime Services LLC. All rights reserved.</div>
+    <div class="wrap foot-inner">
+      <span>© <span id="yr"></span> ABC Prime Services LLC · ABC Prime Lead Desk · All rights reserved.</span>
+      <span>Coconut Creek, Florida</span>
+    </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="transform:translate(-${scrollX}px,-${scrollY}px);transform-origin:top left">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+</script></body>
 </html>
-
-
